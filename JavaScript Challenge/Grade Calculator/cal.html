@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="cal.css">
+  <title>Grade Calculator</title>
+</head>
+<body>
+  <!-- Form for grade input -->
+  <form id="gradeForm">
+    
+    <!-- input student name -->
+    <label for="studentName">Student Name:</label>
+    <input type="text" id="studentName" name="studentName" required>
+
+    <!-- select class -->
+    <label for="classSelect">Select Class:</label>
+    <select id="classSelect" name="classSelect" required>
+      <option value="">--Please choose an option--</option>
+      <option value="JSS1">JSS1</option>
+      <option value="JSS2">JSS2</option>
+      <option value="JSS3">JSS3</option>
+    </select>
+
+    <!-- select subject  -->
+    <label for="subjectSelect">Select Subject:</label>
+    <select id="subjectSelect" name="subjectSelect" required>
+      <option value="">--Please choose an option--</option>
+      <option value="math">Mathematics</option>
+      <option value="science">Science</option>
+      <option value="history">History</option>
+      <option value="english">English</option>
+    </select> 
+
+    <!-- input score -->
+    <label for="scoreInput">Enter Score:</label>
+    <input type="number" id="scoreInput" name="scoreInput" min="0" max="100" required>
+
+    <!-- submit button -->
+    <button  type='submit' onclick="handleCalculate()" >Calculate</button>
+
+    <!-- result display -->
+    <div id="resultDisplay" style="display:none;">
+      <h2>Result</h2>
+      <p>Student name: <span id="resultStudentName"></span></p>
+      <p>Class: <span id="resultClass"></span></p>
+      <p>Subject: <span id="resultSubject"></span></p>
+      <p>Score: <span id="resultScore"></span></p>
+    </div>
+  </form>
+
+  <script src="cal.js"></script>
+</body>
+</html>    
